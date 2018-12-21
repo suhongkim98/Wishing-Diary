@@ -1,0 +1,46 @@
+선언 변수: index, Bucket0~9(리스트 10개) - 각각 인덱스부여
+
+폰을 킬 때:
+	reLoadTinyDB_To_Mobile함수 호출
+
+
+버킷을 작성하시오 클릭 시:
+	변수(index)에 해당 인덱스 값 집어넣음(0~9) // 0번은 1번째 1번은 2번째 .... 9번은 10번째 버킷리스트 저장변수임
+	MainAc 인비지블
+	작성Ac 비지블
+	
+
+
+수정 버튼 누를 시:
+	년 월 일 제목 세부사항 다 입력했는지 조건검사:
+		제목은 퓨전DB로 전송
+		inputDataToBucList 함수에 매개변수 집어넣어서 호출
+		
+
+inputDataToBucList함수:
+	각각의 매개변수를 해당 인덱스의 변수에 저장
+	saveData_To_TinyDB함수 호출
+
+		
+
+saveData_To_TinyDB함수:
+	모든 변수값 TinyDB로 폰에 저장
+	showData_To_Screen함수 호출
+
+showData_To_Screen함수:
+	모든 변수값 setText로 화면에 보여줌
+	
+
+reLoadTinyDB_To_Mobile함수:
+	saveData_To_TinyDB로 저장한 값들 모두 다시 변수에 저장시킴( 앱 끄면 정보 날라가면 안되니까)
+------------------------------
+퓨젼DB 저장은 내가 추가하고 
+검색하고 불러오는 부분 공부해야함 -> 기용
+
+
+d-day = day;
+만약 years - 현재년이 > 0 인경우:
+	d-day += years * 365
+	set_d-day
+else 만약 month - 현재월 >0인경우:
+	d-day += 
